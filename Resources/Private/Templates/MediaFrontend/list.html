@@ -1,0 +1,42 @@
+<f:layout name="Default" />
+<f:section name="main">
+
+<table>
+	<thead>
+		<tr>
+			<th>uid</th>
+			<th>name</th>
+			<th>size</th>
+			<th>alternative</th>
+			<th>caption</th>
+			<th>description</th>
+			<th>keywords</th>
+			<th>categories</th>
+		</tr>
+	</thead>
+	<tbody>
+
+<f:for each="{medias}" as="media">
+
+		<tr>
+			<td>{media.uid}</td>
+			<td>{media.name}</td>
+			<td>{media.size}</td>
+			<td>{media.alternative}</td>
+			<td>{media.caption}</td>
+			<td>{media.description}</td>
+			<td>{media.keywords}</td>
+			<td>
+				<f:for each="{media.categories}" as="category">
+					{category.title},
+				</f:for>
+			</td>
+		</tr>
+
+</f:for>
+
+	</tbody>
+</table>
+
+
+</f:section>
